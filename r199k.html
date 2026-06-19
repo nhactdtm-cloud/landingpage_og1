@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DJ Master Bi | Free Music Download </title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffffff, #ffffff);
+      color: rgb(7, 0, 0);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .top-title {
+      font-size: 32px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 420px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgb(0, 0, 0);
+    }
+
+    .card {
+  width: 100%;
+  max-width: 420px;
+  background: rgb(67, 65, 65);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+    h1, h2 {
+      text-align: center;
+      color: hsl(214, 89%, 52%);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    ul {
+      margin: 10px 0 15px 20px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 15px 0;
+    }
+    a {
+  color: hsl(214, 89%, 52%);
+  text-decoration: none;
+  }
+
+    .input-group {
+      margin-bottom: 12px;
+    }
+
+  label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: rgb(194, 194, 194);
+  }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    input:focus {
+      outline: 2px solid rgb(255, 255, 255);
+    }
+
+ button {
+  width: 100%;
+  padding: 12px;
+
+  /* màu nền nút */
+  background: black;
+
+  /* màu chữ */
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+ }
+
+    button:hover {
+      background: white;
+    }
+
+    .success {
+      display: none;
+      margin-top: 10px;
+      color: rgb(254, 0, 0);
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 class="top-title">F I T C O M A P</h1>
+
+  <img class="hero-img" src="img/anhbia1.jpg" alt="banner">
+
+  <!-- CARD GIỚI THIỆU -->
+  <div class="card">
+    <h2>Nhạc tập aerobic 199K/tháng</h2>
+
+    <p>
+      Nhóm nhạc tập aerobic ổn định, chất lượng với chi phí chỉ <b>199.000đ/tháng</b>.
+    </p>
+
+    <p>Mỗi tháng nhận 8–10 bài nhạc gồm:</p>
+    <ul>
+      <li>DC tổng hợp</li>
+      <li>Giật & eo</li>
+      <li>Thư giãn</li>
+    </ul>
+
+    <p>Hỗ trợ nhạc trend TikTok, tempo từ <b>155–175 BPM</b>.</p>
+
+    <p>Quản lý minh bạch, tính theo từng tháng đăng ký.</p>
+
+    <p>Nhạc do bên em sản xuất với hơn <b>10 năm kinh nghiệm</b> trong aerobic.</p>
+
+    <hr>
+
+    <p>
+    Link Zalo Nhóm: <a href="https://zalo.me/g/wqangu256">https://zalo.me/g/wqangu256</a>
+    </p>
+  </div>
+
+  <!-- CARD FORM -->
+<!-- CARD FORM -->
+<div class="card">
+
+  <h2>ĐĂNG KÍ NHÓM 199K / THÁNG</h2>
+
+  <p>Đăng ký để nhận thông tin mới nhất</p>
+
+  <form id="crmForm">
+
+    <div class="input-group">
+      <label>Họ và tên</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Nhập họ và tên..."
+        required
+      >
+    </div>
+
+    <div class="input-group">
+      <label>Số điện thoại</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Nhập số điện thoại..."
+      >
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Nhập email..."
+      >
+    </div>
+
+    <button type="submit">Gửi thông tin</button>
+
+    <div class="success" id="successMessage">
+      Đã tiếp nhận thông tin của bạn! Chúng tôi sẽ liên hệ sớm nhất
+    </div>
+
+  </form>
+
+ </div>
+
+ <script>
+
+ const form = document.getElementById("crmForm");
+
+ form.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  // Bắt buộc nhập SĐT hoặc Email
+  if (!phone && !email) {
+    alert("Vui lòng nhập số điện thoại hoặc email!");
+    return;
+  }
+
+  const data = {
+    name: name,
+    phone: phone,
+    email: email
+  };
+
+  try {
+
+  document.getElementById("successMessage").style.display = "block";
+
+  form.reset();
+
+  await fetch("https://script.google.com/macros/s/AKfycbyeq2uo4JXeMj56r5FmBtdySeanAS_vf8ERscMjf2Swo-opmJG534CE_TN2Y51rXxtBIQ/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+
+  } catch (err) {
+
+  alert("Lỗi gửi dữ liệu!");
+
+  console.log(err);
+
+  }
+
+  });
+
+  </script>
+
+
+</body>
+
+</html>
