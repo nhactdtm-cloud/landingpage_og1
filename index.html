@@ -156,7 +156,6 @@
     }
 
   </style>
-
 </head>
 
 <body>
@@ -188,11 +187,11 @@
     </p>
 
     <a href="https://soundcloud.com/nhactdtm"
-  class="download-btn"
-  target="_blank"
-  onclick="trackClick(event, 'TAI_NHAC', this.href)">
-  TẢI NHẠC MIỄN PHÍ
-</a>
+       class="download-btn"
+       target="_blank"
+       onclick="trackClick(event, 'TAI_NHAC', this.href)">
+      TẢI NHẠC MIỄN PHÍ
+    </a>
 
   </div>
 
@@ -201,19 +200,19 @@
     <div class="social">
 
       <a href="https://www.facebook.com/nhactdtm/"
-        target="_blank"
+         target="_blank"
          onclick="trackClick(event, 'Facebook', this.href)">
         <i class="fa-brands fa-facebook"></i>
       </a>
 
       <a href="https://www.youtube.com/@nhactdtm"
-        target="_blank"
+         target="_blank"
          onclick="trackClick(event, 'Youtube', this.href)">
         <i class="fa-brands fa-youtube"></i>
       </a>
 
       <a href="https://tiktok.com/@nhactdtm"
-        target="_blank"
+         target="_blank"
          onclick="trackClick(event, 'TikTok', this.href)">
         <i class="fa-brands fa-tiktok"></i>
       </a>
@@ -238,16 +237,14 @@
       Cam kết mang đến chất lượng dịch vụ âm nhạc tốt nhất
     </p>
 
-    <p>
-      <a href="https://fitcomap.nhactdtm.workers.dev/r199k"
-         onclick="trackClick(event, 'GOI_199K', this.href)">
+    <p style="margin-top:10px;">
+      <a href="r199k.html" onclick="trackClick(event, 'GOI_199K', this.href)">
         Đăng kí dịch vụ nhạc nhóm 199k / Tháng
       </a>
     </p>
 
-    <p>
-      <a href="https://fitcomap.nhactdtm.workers.dev/info_djmasterbi"
-         onclick="trackClick(event, 'info_djmasterbi', this.href)">
+    <p style="margin-top:10px;">
+      <a href="info_djmasterbi.html" onclick="trackClick(event, 'info_djmasterbi', this.href)">
         Giới thiệu về DJ Master Bi
       </a>
     </p>
@@ -261,16 +258,16 @@
 <!-- ĐOẠN SCRIPT ĐÃ ĐƯỢC CHUẨN HÓA TOÀN DIỆN -->
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbziQemeYH7NtnQvYpfRfygY3W08fR8FTPMU6DBGFaqs9ZOo2StPpp7QppSJ_hOJhQPxgg/exec";
-<!-- Xưởng Google Apps Script -->
+// Xuởng Google Apps Script 
 const IS_LOCAL =
   window.location.hostname === "127.0.0.1" ||
   window.location.hostname === "localhost";
+
 // Lấy tỉnh thành bằng IP
 async function getProvince() {
   try {
     const res = await fetch("https://ipapi.co/json/");
     const data = await res.json();
-
     return data.region || data.city || "Không xác định";
   } catch (e) {
     return "Không xác định";
@@ -305,7 +302,7 @@ async function trackClick(event, buttonName, linkUrl) {
 
 // PAGE VIEW
 async function trackPageView() {
-if (IS_LOCAL) return;
+  if (IS_LOCAL) return;
   const province = await getProvince();
 
   fetch(SCRIPT_URL, {
@@ -323,7 +320,6 @@ if (IS_LOCAL) return;
 
 document.addEventListener("DOMContentLoaded", trackPageView);
 </script>
-<!-- upload -->
 
 </body>
 </html>
